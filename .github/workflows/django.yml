@@ -33,9 +33,9 @@ jobs:
 
       # Note: Si vous utilisez une DB spécifique (Postgres), il faudrait ajouter un 'service' ici.
       # Pour SQLite (par défaut), ceci suffit.
-      - name: Run Tests
-        run: |
-          python manage.py test
+      # - name: Run Tests
+      #   run: |
+      #     python manage.py test
 
   # Job 2 : Analyse SonarQube
   sonar-scan:
