@@ -10,7 +10,7 @@ jobs:
   # Job 1 : Tests Unitaires (Renommé pour éviter le conflit)
   tests:
     name: Run Tests (Python ${{ matrix.python-version }})
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
       matrix:
@@ -40,7 +40,7 @@ jobs:
   # Job 2 : Analyse SonarQube
   sonar-scan:
     name: Build and analyze
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     # Si vous voulez que l'analyse ne se lance que si les tests passent, décommentez la ligne ci-dessous :
     # needs: tests 
     
