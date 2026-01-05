@@ -10,7 +10,7 @@ jobs:
   # Job 1 : Tests Unitaires (Renommé pour éviter le conflit)
   tests:
     name: Run Tests (Python ${{ matrix.python-version }})
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     strategy:
       max-parallel: 4
       matrix:
